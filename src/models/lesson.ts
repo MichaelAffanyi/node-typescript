@@ -16,24 +16,24 @@ import {Course} from "./course";
 export class Lesson {
 
     @PrimaryGeneratedColumn()
-    id: number | undefined;
+    id!: number;
 
     @Column()
-    title: string | undefined;
+    title!: string;
 
     @Column()
-    duration: string | undefined;
+    duration!: string;
 
     @Column()
-    seqNo: string | undefined;
+    seqNo!: string;
 
     @ManyToOne(() => Course, (course) => course.lessons)
     @JoinColumn({name: "courseId"})
-    course: Course | undefined;
+    course!: Course;
 
     @CreateDateColumn()
-    createdAt: Date | undefined;
+    createdAt!: Date;
 
     @UpdateDateColumn()
-    updatedAt: Date | undefined;
+    updatedAt!: Date;
 }

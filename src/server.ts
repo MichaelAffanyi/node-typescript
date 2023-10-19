@@ -1,9 +1,9 @@
-import express from "express";
 import dotenv from "dotenv"
 
 dotenv.config()
 
 import "reflect-metadata"
+import express from "express";
 import {Express} from "express";
 import root from "./routes/root";
 import {logger} from "./logger";

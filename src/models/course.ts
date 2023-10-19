@@ -8,29 +8,29 @@ import {Lesson} from "./lesson";
 export class Course {
 
     @PrimaryGeneratedColumn()
-    id: number | undefined;
+    id!: number;
 
     @Column()
-    seqNo: number | undefined;
+    seqNo!: number;
 
     @Column()
-    title: string | undefined;
+    title!: string;
 
     @Column()
-    iconUrl: string | undefined;
+    iconUrl!: string;
 
     @Column()
-    longDescription: string | undefined;
+    longDescription!: string;
 
     @Column()
-    category: string | undefined;
+    category!: string;
 
     @OneToMany(() => Lesson, lesson => lesson.course)
-    lessons: Lesson[] | undefined;
+    lessons!: Lesson[];
 
     @CreateDateColumn()
-    createdAt: Date | undefined;
+    createdAt!: Date;
 
     @UpdateDateColumn()
-    updatedAt: Date | undefined;
+    updatedAt!: Date;
 }
