@@ -3,7 +3,8 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-import {Express, Request, Response} from "express";
+import "reflect-metadata"
+import {Express} from "express";
 import root from "./routes/root";
 import {logger} from "./logger";
 import {AppDataSource} from "./data-source";
